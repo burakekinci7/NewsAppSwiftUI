@@ -9,12 +9,11 @@ import SwiftUI
 
 @main
 struct NewsAppSwiftUIApp: App {
-    let persistenceController = PersistenceController.shared
-
+    //dataController is core date required
+    @StateObject private var dataController = DataController()
     var body: some Scene {
         WindowGroup {
-            ContentView()
-                .environment(\.managedObjectContext, persistenceController.container.viewContext)
+            ContentView().environment(\.managedObjectContext,dataController.container.viewContext)
         }
     }
 }

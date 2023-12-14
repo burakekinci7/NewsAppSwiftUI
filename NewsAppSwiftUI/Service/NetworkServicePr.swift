@@ -6,3 +6,13 @@
 //
 
 import Foundation
+
+protocol NetworkServicePr {
+    ///M1 and M2 do the same job
+    
+    //M1
+    func getNews (url: URL) async throws -> News
+    
+    //M2
+    func getNewsEscaping (completion: @escaping  (Result<News?, NetError>) -> Void )
+}

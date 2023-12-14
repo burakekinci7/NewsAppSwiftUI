@@ -26,6 +26,29 @@ final class NewsAppSwiftUIUITests: XCTestCase {
         // UI tests must launch the application that they test.
         let app = XCUIApplication()
         app.launch()
+        
+        app.buttons["Categories, business"].tap()
+        app.collectionViews/*@START_MENU_TOKEN@*/.buttons["technology"]/*[[".cells.buttons[\"technology\"]",".buttons[\"technology\"]"],[[[-1,1],[-1,0]]],[0]]@END_MENU_TOKEN@*/.tap()
+        app.buttons["Conutries, au"].tap()
+        app.collectionViews.buttons["us"].tap()
+        app.collectionViews/*@START_MENU_TOKEN@*/.staticTexts["iOS 17.2: Apple Suddenly Releases Urgent Update Warning For All iPhone Users - Forbes"]/*[[".cells",".buttons[\"iOS 17.2: Apple Suddenly Releases Urgent Update Warning For All iPhone Users - Forbes, The latest iPhone update has been much-anticipated. Here’s what’s in it, how to get it and why you should want to have it on your phone pronto., - David Phelan\"].staticTexts[\"iOS 17.2: Apple Suddenly Releases Urgent Update Warning For All iPhone Users - Forbes\"]",".staticTexts[\"iOS 17.2: Apple Suddenly Releases Urgent Update Warning For All iPhone Users - Forbes\"]"],[[[-1,2],[-1,1],[-1,0,1]],[[-1,2],[-1,1]]],[0]]@END_MENU_TOKEN@*/.tap()
+        app.navigationBars["Forbes"].buttons["Back"].tap()
+        
+        
+        
+        
+        // "Go to Second View" butonuna tıkla
+        app.buttons["BookMarks"].tap()
+        
+        
+
+
+                
+                
+                
+        
+
+                
 
         // Use XCTAssert and related functions to verify your tests produce the correct results.
     }
